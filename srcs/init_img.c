@@ -12,16 +12,16 @@
 
 #include "fractol.h"
 
-t_img		*init_img(t_env *env, int height, int width)
+t_img		*init_img(t_env *env)
 {
-	t_img	*image;
+	t_img	*img;
 
-	if (!(image = (t_img*)malloc(sizeof(t_img))))
+	if (!(img = (t_img*)malloc(sizeof(t_img))))
 		return (NULL);
-	image->img = mlx_new_image(env->mlx, height, width);
-	image->data = mlx_get_data_addr(image->img,\
-		&image->bpp, &image->sizeline, &image->endian);
-	return (image);
+	img->img = mlx_new_image(env->mlx, X_SIZE, Y_SIZE);
+	img->data = mlx_get_data_addr(img->img,\
+		&img->bpp, &img->sizeline, &img->endian);
+	return (img);
 }
 
 void		mlx_put_pixel_to_img(t_env *env, int x, int y, int color)
@@ -33,18 +33,11 @@ void		mlx_put_pixel_to_img(t_env *env, int x, int y, int color)
 			octet * y)], &color, octet);
 }
 
-int			fill_img(t_env *env)
+void		set_pixel_to_image(t_env *e)
 {
-	int		h;
-	int		w;
-
-	h = HEIGHT_DRAW;
-	w = WIDTH_DRAW;
-	if (!(env->back_img->img = mlx_xpm_file_to_image(env->mlx, \
-			"./images/paysage-galaxy2.xpm", &w, &h)))
-		return (0);
-	if (!(env->sup_img->img = mlx_xpm_file_to_image(env->mlx, \
-			"./images/blancdim.XPM")))
-		return (0);
-	return (1);
+	if (e->p->i == e->p->iter)
+		mlx_put_pixel_to_img(e, e->p->x, e->p->y, 0);
+	else
+		mlx_put_pixel_to_img(e, e->p->x, e->p->y, e->p->color * e->p->i /\
+			e->p->iter);
 }

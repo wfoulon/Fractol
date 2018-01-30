@@ -13,10 +13,9 @@
 #ifndef DEFINE_H
 # define DEFINE_H
 
-# define X_SIZE 1920
-# define Y_SIZE 1080
-
-# define HEIGHT_DRAW 800
-# define WIDTH_DRAW 600
+# define TRUE 1
+# define FALSE 0
+# define X_SIZE 800
+# define Y_SIZE 800
 
 #endif

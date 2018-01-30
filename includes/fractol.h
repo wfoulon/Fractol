@@ -24,20 +24,49 @@
 # include <stdlib.h>
 
 /*
+** draw_fractals.c
+*/
+void		draw_mandelbrot(t_env *e);
+void		draw_bship(t_env *e);
+void		draw_tricorn(t_env *e);
+void		draw_celtic(t_env *e);
+
+/*
+** draw_fractals2.c
+*/
+void		draw_julia(t_env *e);
+void		draw_chameleon(t_env *e);
+void		draw_sword(t_env *e);
+void		draw_tst(t_env *e);
+
+/*
 ** init_img.c
 */
 t_img		*init_img(t_env *env);
 void		mlx_put_pixel_to_img(t_env *env, int x, int y, int color);
-int			fill_img(t_env *env);
+void		set_pixel_to_image(t_env *e);
 
 /*
 ** init_env.c
 */
 t_env		*new_env(void);
+t_env		*init_env(char *str);
 
 
 /*
 ** init_param.c
 */
+t_param		*init_mandelbrot(void);
+t_param		*init_julia(void);
+
+/*
+** main.c
+*/
+void		ft_error(char *str);
+
+/*
+** select_fractals.c
+*/
+void		select_fractals(t_env *env);
 
 #endif
