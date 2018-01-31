@@ -49,6 +49,7 @@ typedef	struct 			s_env
 	void				*win;
 	t_img				*img;
 	t_param				*p;
+
 }						t_env;
 
 #endif

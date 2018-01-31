@@ -18,6 +18,12 @@ void			ft_error(char *str)
 	exit(EXIT_FAILURE);
 }
 
+int			ft_exit(t_env *env)
+{
+	env = NULL;
+	exit(0);
+}
+
 int				main(int ac, char **av)
 {
 	t_env		*env;

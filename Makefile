@@ -19,7 +19,10 @@ SRCS= srcs/init_env.c \
 		srcs/init_param.c \
 		srcs/draw_fractals.c \
 		srcs/draw_fractals2.c \
+		srcs/key_functions.c \
+		srcs/function_event.c \
 		srcs/main.c \
+		srcs/print_menu.c \
 		srcs/select_fractals.c \
 
 OBJ= $(SRCS:.c=.o)

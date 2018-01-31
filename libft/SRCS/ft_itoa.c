@@ -38,26 +38,26 @@ char			*ft_itoa(int n)
 	int		q;
 	int		len;
 	char	*toa;
+	char	*tmp;
 
+	if (n == -2147483648)
+		return ("-2147483648");
 	len = ft_int_len(n);
 	toa = (char *)malloc(sizeof(char) * (len + 1));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	tmp = toa;
 	if (n == 0 || !toa)
-		return (ft_strdup("0"));
+		return ("0");
 	if (n < 0)
-	{
 		toa[0] = '-';
-		n = -n;
-	}
+	n = (n < 0 ? -n : n);
 	toa[len] = '\0';
 	while (n > 0)
 	{
-		toa[len - 1] = n % 10 + '0';
+		toa[len-- - 1] = n % 10 + '0';
 		q = n % 10;
 		n = n - q;
 		n = n / 10;
-		len--;
 	}
+	free(tmp);
 	return (toa);
 }

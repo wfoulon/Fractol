@@ -31,6 +31,9 @@ void		select_fractals(t_env *env)
 	if (ft_strcmp(env->name, "tst") == 0)
 		draw_tst(env);
 	mlx_clear_window(env->mlx, env->win);
+	print_menu(env);
 	mlx_put_image_to_window(env->mlx, env->win, env->img->img, 0, 0);
+	mlx_hook(env->win, 2, 3, key_funct, env);
+	mlx_hook(env->win, 17, 1l < 17, ft_exit, env);
 	mlx_loop(env->mlx);
 }

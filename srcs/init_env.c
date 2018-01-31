@@ -26,15 +26,19 @@ t_env		*new_env(void)
 	return (env);
 }
 
-t_env		*init_env(char *str)
+t_env		*init_env(char *av1)
 {
 	t_env	*env;
 
 	if (!(env = new_env()))
 		return (NULL);
-	env->name = str;
+	env->name = av1;
 	env->mlx = mlx_init();
-	env->win = mlx_new_window(env->mlx, X_SIZE + 200, Y_SIZE, env->name);
+	if (!env->mlx)
+		return (NULL);
+	if (!(env->win = mlx_new_window(env->mlx, X_SIZE + 200, Y_SIZE, \
+			"Wfoulon's fractol")))
+		return (NULL);
 	env->img = init_img(env);
 	if (!ft_strcmp(env->name, "mandelbrot") || !ft_strcmp(env->name, "bship") || \
 		!ft_strcmp(env->name, "tricorn") || !ft_strcmp(env->name, "celtic"))
