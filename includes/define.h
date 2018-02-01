@@ -13,9 +13,6 @@
 #ifndef DEFINE_H
 # define DEFINE_H
 
-# define TRUE 1
-# define FALSE 0
-
 # define X_SIZE 800
 # define Y_SIZE 800
 

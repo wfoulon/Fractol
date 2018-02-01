@@ -26,8 +26,8 @@ void		draw_julia(t_env *e)
 				(e->p->i < e->p->iter))
 			{
 				e->p->tmp = e->p->z_r;
-				e->p->z_r = (e->p->z_r * e->p->z_r) - (e->p->z_i * e->p->z_i) + \
-					e->p->c_r;
+				e->p->z_r = (e->p->z_r * e->p->z_r) - (e->p->z_i * e->p->z_i) \
+					+ e->p->c_r;
 				e->p->z_i = 2 * e->p->z_i * e->p->tmp + e->p->c_i;
 				e->p->i++;
 			}
@@ -53,8 +53,8 @@ void		draw_chameleon(t_env *e)
 				(e->p->i < e->p->iter))
 			{
 				e->p->tmp = e->p->z_r;
-				e->p->z_r = ((e->p->z_r * e->p->z_r) - (e->p->z_i * e->p->z_i) + \
-					e->p->c_r);
+				e->p->z_r = ((e->p->z_r * e->p->z_r) - (e->p->z_i * \
+					e->p->z_i) + e->p->c_r);
 				e->p->z_i = -2 * e->p->z_i * e->p->tmp + e->p->c_i;
 				e->p->i++;
 			}
@@ -80,8 +80,8 @@ void		draw_sword(t_env *e)
 				(e->p->i < e->p->iter))
 			{
 				e->p->tmp = e->p->z_r;
-				e->p->z_r = fabs((e->p->z_r * e->p->z_r) - (e->p->z_i * e->p->z_i) \
-					+ e->p->c_r);
+				e->p->z_r = fabs((e->p->z_r * e->p->z_r) - (e->p->z_i * \
+					e->p->z_i) + e->p->c_r);
 				e->p->z_i = fabs(2 * e->p->z_i * e->p->tmp + e->p->c_i);
 				e->p->i++;
 			}
@@ -107,8 +107,8 @@ void		draw_tst(t_env *e)
 				e->p->i < e->p->iter)
 			{
 				e->p->tmp = e->p->z_r;
-				e->p->z_r = fabs((e->p->z_r * e->p->z_r) - (e->p->z_i * e->p->z_i)) + \
-					e->p->c_r;
+				e->p->z_r = fabs((e->p->z_r * e->p->z_r) - (e->p->z_i * \
+					e->p->z_i)) + e->p->c_r;
 				e->p->z_i = 2 * e->p->z_i * e->p->tmp + e->p->c_i;
 				e->p->i++;
 			}

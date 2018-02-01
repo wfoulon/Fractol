@@ -27,6 +27,7 @@ t_img		*init_img(t_env *env)
 void		mlx_put_pixel_to_img(t_env *env, int x, int y, int color)
 {
 	int		octet;
+
 	octet = env->img->bpp / 8;
 	if (x > 0 && x < X_SIZE && y > 0 && y < Y_SIZE)
 		ft_memcpy(&env->img->data[octet * (x + env->img->sizeline / \

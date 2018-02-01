@@ -22,6 +22,7 @@
 # include <math.h>
 # include <fcntl.h>
 # include <stdlib.h>
+# include <limits.h>
 
 /*
 ** draw_fractals.c
@@ -79,10 +80,14 @@ void		ft_error(char *str);
 int			ft_exit(t_env *env);
 
 /*
+** mouse_hook.c
+*/
+int			mouse_funct(int mouse, int x, int y, t_env *env);
+int			motion(int x, int y, t_env *env);
+/*
 ** print_menu.c
 */
 void		name(t_env *env);
-void		name2(t_env *env);
 void		print_menu(t_env *env);
 
 /*

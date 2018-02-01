@@ -22,6 +22,7 @@ SRCS= srcs/init_env.c \
 		srcs/key_functions.c \
 		srcs/function_event.c \
 		srcs/main.c \
+		srcs/mouse_hook.c \
 		srcs/print_menu.c \
 		srcs/select_fractals.c \
 

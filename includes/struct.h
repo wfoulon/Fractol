@@ -13,7 +13,7 @@
 #ifndef STRUCT_H
 # define STRUCT_H
 
-typedef	struct 			s_img
+typedef	struct			s_img
 {
 	void				*img;
 	char				*data;
@@ -22,7 +22,7 @@ typedef	struct 			s_img
 	int					bpp;
 }						t_img;
 
-typedef	struct 			s_param
+typedef	struct			s_param
 {
 	int					iter;
 	int					x;
@@ -42,7 +42,7 @@ typedef	struct 			s_param
 	double				tmp;
 }						t_param;
 
-typedef	struct 			s_env
+typedef	struct			s_env
 {
 	char				*name;
 	void				*mlx;

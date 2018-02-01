@@ -40,11 +40,11 @@ t_env		*init_env(char *av1)
 			"Wfoulon's fractol")))
 		return (NULL);
 	env->img = init_img(env);
-	if (!ft_strcmp(env->name, "mandelbrot") || !ft_strcmp(env->name, "bship") || \
-		!ft_strcmp(env->name, "tricorn") || !ft_strcmp(env->name, "celtic"))
+	if (!ft_strcmp(env->name, "mandelbrot") || !ft_strcmp(env->name, "bship") \
+		|| !ft_strcmp(env->name, "tricorn") || !ft_strcmp(env->name, "celtic"))
 		env->p = init_mandelbrot();
-	else if (!ft_strcmp(env->name, "julia") || !ft_strcmp(env->name, "chameleon") \
-		 || !ft_strcmp(env->name, "sword") || !ft_strcmp(env->name, "tst"))
+	else if (!ft_strcmp(env->name, "julia") || !ft_strcmp(env->name, "tst") \
+		|| !ft_strcmp(env->name, "sword") || !ft_strcmp(env->name, "chameleon"))
 		env->p = init_julia();
 	return (env);
 }

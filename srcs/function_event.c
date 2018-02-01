@@ -30,8 +30,7 @@ static double		rescale_moove(t_env *env)
 	return (i);
 }
 
-
-void				moove(int keycode,t_env *env)
+void				moove(int keycode, t_env *env)
 {
 	double			i;
 
@@ -53,7 +52,7 @@ int					key_funct(int keycode, t_env *env)
 	if (env->mlx == NULL)
 		return (0);
 	if (keycode == TOUCH_ESC)
-		exit(1);
+		exit(EXIT_SUCCESS);
 	if (keycode == MORE_ITER || keycode == LESS_ITER)
 		iter(keycode, env);
 	if (keycode == MORE_COLOR || keycode == LESS_COLOR)

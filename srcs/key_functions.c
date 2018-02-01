@@ -25,21 +25,21 @@ void		theme(int keycode, t_env *env)
 	if (keycode == T1)
 		env->p->color = RGB(255, 255, 255);
 	if (keycode == T2)
-		env->p->color = RGB(210, 210, 210);
+		env->p->color = RGB(211, 38, 53);
 	if (keycode == T3)
-		env->p->color = RGB(160, 160, 160);
+		env->p->color = RGB(99, 217, 239);
 	if (keycode == T4)
-		env->p->color = RGB(110, 110, 110);
+		env->p->color = RGB(57, 211, 108);
 	if (keycode == T5)
-		env->p->color = RGB(50, 50, 50);
+		env->p->color = RGB(165, 129, 255);
 }
 
 void		color(int keycode, t_env *env)
 {
-	if (keycode == MORE_COLOR && env->p->color < 2147483391)
-		env->p->color += 3000;
+	if (keycode == MORE_COLOR && env->p->color < INT_MAX - 2000)
+		env->p->color += 2000;
 	if (keycode == LESS_COLOR && env->p->color > 256)
-		env->p->color -= 3000;
+		env->p->color -= 2000;
 }
 
 void		origin(int keycode, t_env *env)

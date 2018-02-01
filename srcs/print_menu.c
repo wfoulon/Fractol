@@ -12,51 +12,31 @@
 
 #include "fractol.h"
 
-void		name2(t_env *env)
+void		name(t_env *env)
 {
 	if (ft_strcmp(env->name, "julia") == 0)
 		mlx_string_put(env->mlx, env->win, 875, 20, 0x42F483, "Julia");
-	/*if (ft_strcmp(av1, "sword") == 0)
-	{
-		env->name = "Sword";
-		mlx_string_put(env->mlx, env->win, 875, 20, 0xC1500D, env->name);
-	}
-	if (ft_strcmp(av1, "tst") == 0)
-	{
-		env->name = "Tst";
-		mlx_string_put(env->mlx, env->win, 880, 20, 0xC1500D, env->name);
-	}
-	if (ft_strcmp(av1, "chameleon") == 0)
-	{	
-		env->name = "Chameleon";
-		mlx_string_put(env->mlx, env->win, 866, 20, 0xC1500D, env->name);
-	}*/
-}
-
-void		name(t_env *env)
-{
+	if (ft_strcmp(env->name, "sword") == 0)
+		mlx_string_put(env->mlx, env->win, 875, 20, 0x42F483, "Sword");
+	if (ft_strcmp(env->name, "tst") == 0)
+		mlx_string_put(env->mlx, env->win, 880, 20, 0x42F483, "Tst");
+	if (ft_strcmp(env->name, "chameleon") == 0)
+		mlx_string_put(env->mlx, env->win, 866, 20, 0x42F483, "Chameleon");
 	if (ft_strcmp(env->name, "mandelbrot") == 0)
-	{	
-		env->name = "Mandelbrot";
-		mlx_string_put(env->mlx, env->win, 850, 20, 0xC1500D, env->name);
-	}
-	/*else if (ft_strcmp(av1, "bship") == 0)
-		env->name = "Bship";
-	else if (ft_strcmp(av1, "tricorn") == 0)
-		env->name = "Tricorn";
-	else if (ft_strcmp(av1, "celtic") == 0)
-		env->name = "Celtic";*/
-	else 
-		name2(env);
+		mlx_string_put(env->mlx, env->win, 850, 20, 0x42F483, "Mandelbrot");
+	if (ft_strcmp(env->name, "bship") == 0)
+		mlx_string_put(env->mlx, env->win, 875, 20, 0x42F483, "Bship");
+	if (ft_strcmp(env->name, "tricorn") == 0)
+		mlx_string_put(env->mlx, env->win, 875, 20, 0x42F483, "Tricorn");
+	if (ft_strcmp(env->name, "celtic") == 0)
+		mlx_string_put(env->mlx, env->win, 875, 20, 0x42F483, "Celtic");
 }
 
 static void	commands(t_env *env)
 {
 	char	*iter;
-	char	*zoom;
 
 	iter = ft_itoa(env->p->iter);
-	zoom = ft_itoa(env->p->zoom);
 	mlx_string_put(env->mlx, env->win, 815, 70, 0x42DCF4, "Moove   :  Arrows");
 	mlx_string_put(env->mlx, env->win, 815, 110, 0x42DCF4, "Iter +  :    s  ");
 	mlx_string_put(env->mlx, env->win, 815, 150, 0x42DCF4, "Iter -  :    a  ");
@@ -73,8 +53,6 @@ static void	commands(t_env *env)
 		mlx_string_put(env->mlx, env->win, 935, 710, 0x990000, "off");
 	else
 		mlx_string_put(env->mlx, env->win, 935, 710, 0x10A943, "on");
-	mlx_string_put(env->mlx, env->win, 815, 750, 0x42DCF4, "Zoom    :        ");
-	mlx_string_put(env->mlx, env->win, 935, 750, 0x42DCF4, zoom);
 }
 
 void		print_menu(t_env *env)
@@ -86,7 +64,7 @@ void		print_menu(t_env *env)
 	y = 0;
 	while (y <= Y_SIZE)
 	{
-		mlx_pixel_put(env->mlx,env->win, x, y, 0x165AA4);
+		mlx_pixel_put(env->mlx, env->win, x, y, 0x165AA4);
 		y++;
 	}
 	name(env);

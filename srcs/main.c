@@ -18,7 +18,7 @@ void			ft_error(char *str)
 	exit(EXIT_FAILURE);
 }
 
-int			ft_exit(t_env *env)
+int				ft_exit(t_env *env)
 {
 	env = NULL;
 	exit(0);
@@ -33,7 +33,7 @@ int				main(int ac, char **av)
 chameleon/celtic/test]");
 	if (!ft_strcmp(av[1], "julia") || !ft_strcmp(av[1], "mandelbrot") || \
 		!ft_strcmp(av[1], "bship") || !ft_strcmp(av[1], "sword") || \
-		!ft_strcmp(av[1], "tricorn") || !ft_strcmp(av[1], "chameleon") ||
+		!ft_strcmp(av[1], "tricorn") || !ft_strcmp(av[1], "chameleon") || \
 		!ft_strcmp(av[1], "celtic") || !ft_strcmp(av[1], "tst"))
 	{
 		env = init_env(av[1]);

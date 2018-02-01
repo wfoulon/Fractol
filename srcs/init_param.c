@@ -34,6 +34,7 @@ t_param			*init_mandelbrot(void)
 t_param			*init_julia(void)
 {
 	t_param		*p;
+
 	if (!(p = (t_param *)malloc(sizeof(t_param))))
 		return (NULL);
 	p->iter = 100;
