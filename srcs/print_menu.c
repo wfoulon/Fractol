@@ -45,14 +45,13 @@ static void	commands(t_env *env)
 	mlx_string_put(env->mlx, env->win, 815, 270, 0x42DCF4, "Color + :    +  ");
 	mlx_string_put(env->mlx, env->win, 815, 310, 0x42DCF4, "Color - :    -  ");
 	mlx_string_put(env->mlx, env->win, 815, 350, 0x42DCF4, "Motion  :   Click");
-	mlx_string_put(env->mlx, env->win, 813, 620, 0x42F483, "    PARAMETERS   ");
-	mlx_string_put(env->mlx, env->win, 815, 670, 0x42DCF4, "Iter    :        ");
-	mlx_string_put(env->mlx, env->win, 935, 670, 0x42DCF4, iter);
-	mlx_string_put(env->mlx, env->win, 815, 710, 0x42DCF4, "Motion  :        ");
+	mlx_string_put(env->mlx, env->win, 815, 390, 0x42DCF4, "Iter    :        ");
+	mlx_string_put(env->mlx, env->win, 935, 390, 0x42DCF4, iter);
+	mlx_string_put(env->mlx, env->win, 815, 430, 0x42DCF4, "Motion  :        ");
 	if (env->p->motion == 0)
-		mlx_string_put(env->mlx, env->win, 935, 710, 0x990000, "off");
+		mlx_string_put(env->mlx, env->win, 935, 430, 0x990000, "off");
 	else
-		mlx_string_put(env->mlx, env->win, 935, 710, 0x10A943, "on");
+		mlx_string_put(env->mlx, env->win, 935, 430, 0x10A943, "on");
 }
 
 void		print_menu(t_env *env)
@@ -64,7 +63,7 @@ void		print_menu(t_env *env)
 	y = 0;
 	while (y <= Y_SIZE)
 	{
-		mlx_pixel_put(env->mlx, env->win, x, y, 0x165AA4);
+		mlx_pixel_put(env->mlx, env->win, x, y, 0x42F483);
 		y++;
 	}
 	name(env);

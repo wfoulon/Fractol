@@ -18,7 +18,7 @@ t_param			*init_mandelbrot(void)
 
 	if (!(p = (t_param *)malloc(sizeof(t_param))))
 		return (NULL);
-	p->iter = 100;
+	p->iter = 50;
 	p->motion = 0;
 	p->x1 = -2.02;
 	p->x2 = 0.6;
@@ -37,8 +37,8 @@ t_param			*init_julia(void)
 
 	if (!(p = (t_param *)malloc(sizeof(t_param))))
 		return (NULL);
-	p->iter = 100;
-	p->motion = 0;
+	p->iter = 50;
+	p->motion = 1;
 	p->x1 = -1.95;
 	p->y1 = -1.95;
 	p->zoom = 204;

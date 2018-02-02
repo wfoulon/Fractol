@@ -60,7 +60,7 @@ int			motion(int x, int y, t_env *env)
 					env->p->c_i -= 0.05;
 			}
 		}
-	select_fractals(env);
+		select_fractals(env);
 	}
 	return (0);
 }

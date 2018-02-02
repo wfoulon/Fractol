@@ -27,6 +27,7 @@ static double		rescale_moove(t_env *env)
 		i = 0.0002;
 	if (env->p->zoom > 100000)
 		i = 0.00002;
+	i *= 4;
 	return (i);
 }
 

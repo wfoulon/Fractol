@@ -61,11 +61,11 @@ all:		$(NAME)
 clean:
 	@make -C libft/ clean
 	@make -C mlx/ clean
-	@rm -f $(OBJ)
-	@echo "\033[37mall FDF_files.o are deleted\033[0m"
+	@rm -rf $(OBJ)
+	@echo "\033[37mall Fractol_files.o are deleted\033[0m"
 
-fclean:
-	@rm -f $(NAME)
+fclean: clean
+	@rm -rf $(NAME)
 	@make -C libft/ fclean
 	@echo "\033[31m$(NAME) is deleted\033[0m"
 
@@ -75,5 +75,6 @@ norme:
 	@norminette srcs/
 	@norminette includes/
 	@norminette libft/
+	@norminette Makefile/
 
 .PHONY: all clean fclean re

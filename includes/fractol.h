@@ -78,6 +78,7 @@ void		origin(int keycode, t_env *env);
 */
 void		ft_error(char *str);
 int			ft_exit(t_env *env);
+void		ft_free(t_env *env);
 
 /*
 ** mouse_hook.c

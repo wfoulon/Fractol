@@ -27,7 +27,7 @@ void		theme(int keycode, t_env *env)
 	if (keycode == T2)
 		env->p->color = RGB(211, 38, 53);
 	if (keycode == T3)
-		env->p->color = RGB(99, 217, 239);
+		env->p->color = RGB(103, 248, 140);
 	if (keycode == T4)
 		env->p->color = RGB(57, 211, 108);
 	if (keycode == T5)

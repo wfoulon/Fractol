@@ -12,21 +12,28 @@
 
 #include "fractol.h"
 
-void			ft_error(char *str)
+void		ft_error(char *str)
 {
 	ft_putendl(str);
 	exit(EXIT_FAILURE);
 }
 
-int				ft_exit(t_env *env)
+int			ft_exit(t_env *env)
 {
 	env = NULL;
 	exit(0);
 }
 
-int				main(int ac, char **av)
+void		ft_free(t_env *env)
 {
-	t_env		*env;
+	free(env->p);
+	free(env);
+	mlx_destroy_image(env->mlx, env->img);
+}
+
+int			main(int ac, char **av)
+{
+	t_env	*env;
 
 	if (ac != 2)
 		ft_error("Usage: ./fractol [julia/mandelbrot/bship/sword/tricorn/\
@@ -38,6 +45,7 @@ chameleon/celtic/test]");
 	{
 		env = init_env(av[1]);
 		select_fractals(env);
+		ft_free(env);
 	}
 	else
 		ft_error("Usage: ./fractol [julia/mandelbrot/bship/sword/tricorn/\
