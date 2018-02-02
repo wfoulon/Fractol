@@ -56,7 +56,7 @@ int			motion(int x, int y, t_env *env)
 					env->p->c_r -= 0.05;
 				if (x < X_SIZE / 2 && y > Y_SIZE / 2)
 					env->p->c_i += 0.05;
-				if (x > X_SIZE / 2 && y < Y_SIZE / 2)
+				if (x > X_SIZE / 2 && y > Y_SIZE / 2)
 					env->p->c_i -= 0.05;
 			}
 		}
